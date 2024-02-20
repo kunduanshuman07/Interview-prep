@@ -16,3 +16,19 @@
 3. Binary Tree Postorder traversal
 4. Invert Binary Tree
 5. Maximum Depth of Binary Tree 
+
+
+## Day 2 ->
+
+### Array:
+6. Length of last word
+7. Two sum
+8. Longest common prefix
+9. Group anagrams
+10. Pascal's Triangle
+
+### Trees:
+6. Diameter of Binary Tree
+7. Balanced Binary Tree
+8. Same Tree
+9. Subtree of another Tree

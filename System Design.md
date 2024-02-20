@@ -12,7 +12,7 @@ Let's suppose we have started a Pizza shop with 1 chef, going forward we cater o
 3. Horizontal Scaling:
    If we still get high amount of orders and chef has reached it epitome of hard work and cannot stretch more then we increase the amount of chefs in our store.
 4. Resilience:
-   What if there is a power outage in our store? We need to create backups and open another store somewhere else to about single point of failure. This makes the business Fault tolerant and gives quicker response.
+   What if there is a power outage in our store? We need to create backups and open another store somewhere else to avoid single point of failure. This makes the business Fault tolerant and gives quicker response.
 5. Microservice architecture:
    If we have two orders coming in our store , one for pizza(higher volume) and other for garlic bread(lower volume) and we have 3 chefs. We distribute the garlic bread task to 1 chef and keep other two chefs for pizza. This is breaking requests to small services and then responding.
 6. Load Balancing:
