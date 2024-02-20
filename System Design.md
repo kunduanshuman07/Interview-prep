@@ -27,12 +27,41 @@ Let's suppose we have started a Pizza shop with 1 chef, going forward we cater o
 #### Scalability:
 
 1. Vertical Scaling: 
-   -> Increasing the capacity of a single source to handle the load.
-   -> Single point of failure
-   -> Consistent with data because all data transactions are from one resource only.
-   -> There is a hardware limit.
+   1. Increasing the capacity of a single source to handle the load.
+   2. Single point of failure
+   3. Consistent with data because all data transactions are from one resource only.
+   4. There is a hardware limit.
 2. Horizontal Scaling: 
-   -> Increasing the resource count to handle the load.
-   -> Its Resilient.
-   -> Inconsistent with data because transactions can be from any resource at any time.
-   -> Good Scalability. 
+   1. Increasing the resource count to handle the load.
+   2. Its Resilient.
+   3. Inconsistent with data because transactions can be from any resource at any time.
+   4. Good Scalability. 
+
+## Day 2:
+
+### Load Balancing:
+1. Let us assume you have a server which has a program which other users want to use.
+2. Users will send a request and in return get a reponse from the server.
+3. If we have too many users, to distribute the traffic you purhcase N number of servers.
+4. To divide the traffic evenly on those N servers is called **Load Balancing**.
+
+### Consistent Hashing:
+1. Let us assume we have **n** number of servers.
+2. When a request to the server is triggered by the user, it actually generates a request ID which is uniformly random.
+3. This request id **[r]** is then sent to the hash function and a hashed value is generated **[h(r)]**.
+4. The hashed value **[m]** is then divided by **n** and the remainder is the server index on which the request will be sent.
+5. This is the basic process of how Consistent Hashing works.
+   
+### How consistent hashing works in practical world in distributed systems to balance the load?
+1. Whenever a user sends a request, it has a unique identifier associated (e.g. username, userId, etc.), say **x**.
+2. This unique identifier is hashed using a hash function, say **h(x)=y**.
+3. The servers on the other hand also have unique identifiers associated with them (e.g IP address, etc.), say **m**.
+4. This unique identifier is also hashed using the same hash function, say **h(m)=n**.
+5. Imagine a virtual ring.
+6. This ring actually stores the hashed server values and has a range associated with it.
+7. For e.g if Server A, B and C have hashed values as 10, 40, 80 and total hash space is 0-100 which is total capacity of the ring.
+8. Then server A has a range of 10-39, B has a range of 40-79 and C has a range of 80-9 (circle wrapping).
+9. So when a user sends a request its hashed value **y** is searched in the clockwise direction in the ring such that the first hashed server value range is greater than or equal to **y** is found. 
+10. The user hashed value falls under some server's range and that server is responsible for handling the request of the server.
+11. A server can be added or removed easily only by hashing and placing the range in the virtual ring.
+12. This evenly distributes the load on the ring and this is how consisitent hashing helps load balancing in distributed systems in real life practical scenarios.
