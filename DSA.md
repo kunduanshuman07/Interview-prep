@@ -26,6 +26,7 @@
 8. Longest common prefix
 9. Group anagrams
 10. Pascal's Triangle
+11. Remove Element
 
 ### Trees:
 6. Diameter of Binary Tree
