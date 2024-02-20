@@ -65,3 +65,14 @@ Let's suppose we have started a Pizza shop with 1 chef, going forward we cater o
 10. The user hashed value falls under some server's range and that server is responsible for handling the request of the server.
 11. A server can be added or removed easily only by hashing and placing the range in the virtual ring.
 12. This evenly distributes the load on the ring and this is how consisitent hashing helps load balancing in distributed systems in real life practical scenarios.
+13. Consistent hashing removes the fear of having duplicate requests being made to any server.
+
+
+### Message Queue: 
+1. Let us assume we have 4 servers which are currently in process of executing requests from users.
+2. Every task being assigned to the server is inside a **database** which logs the tasks with the server id which is executing it and the status of the task which yes/no (exceuted or not).
+3. If one of the servers goes on a power outage or failure, What will happen to the unexecuted tasks assigned to it?
+4. We have a heartbeat notifier + load balancer with us which combined is termed as Message Queue.
+5. The heartbeat notifier checks the heartbeat of servers and when a server fails it actually goes into the DB and collects all the unexceuted tasks from all the server id's.
+6. The load balancer distributes all the tasks evenly to the remaining servers.
+7. What if server 4 fails and server 3 is working on executing task id 3 and load balancer picking up all the unexecuted tasks picks up task id 3 as well and what if assigns it back to server 3 again where task id 3 is in process. This is duplicacy of tasks. This fear is taken care by consistent hashing inside the load balancer which does not allow duplicate tasks being created.
