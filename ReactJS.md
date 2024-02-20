@@ -45,3 +45,50 @@ Q7. What is the role of JSX in React?
 Q8. What is declarative syntax & imperative syntax?
 1. Output driven code is called declarative syntax which provides you what to do without involving the steps of how to do.
 2. Imperative syntax involves commands which tells you what to do and how to do both?
+
+
+## Day 2:
+
+Q9. What is an Arrow funtion in JSX?
+1. Simple and Concise way of defining regular javascript functions.
+
+Q10. How to setup a React project?
+1. Terminal -> npx create-react-app name-of-project
+2. Go into the project directory and -> npm start
+
+Q11. What are the main files must required to start a React web application?
+1. node_modules - contains all your libraries that you are going to use to build the application. Anything added using **npm install library-name** appears in these in node_modules. (It's huge in size)
+2. public folder - contains **index.html**
+3. src folder - contains **App.js & index.js**
+
+Q12. How does React loads the web page and displays it to the user?
+1. User requests the frontend server by clicking on some website link.
+2. The frontend server finds the **index.html** folder.
+3. **index.html** then finds and loads the entry point of javascript which is **index.js** using React libraries.
+4. **index.js** then finds the root element in the **index.html** and replaces it by **App.js**.
+5. **App.js** is the root component of the web application and contains all the child components which is displayed via **index.html**.
+6. package.json - It is the json file which contains the summary of the project including, name, react library versions, etc.
+
+Q13. What are the differences between React and Angular?
+1. React is a Javascript library -> Angular is a complete framework.
+2. React is simple to learn -> Angular is complex to learn.
+3. React uses Virtual DOM -> Angular uses real DOM.
+4. React is fast -> Angular is slow as compared to React.
+5. React uses external libraries for complex functionalities -> Angular has built in support for everything because it's a framework.
+
+Q14. What are the differences between library and framework?
+1. Library is a combination of reusable codes distributed in terms of objects, modules, classes, components, etc. -> Angular is a set of tools, libraries, etc.
+2. Your application(you) controls the usage and integration of library in your code where as Framework controls the structure of the web application.
+3. Library is lightweight and can be manipulated as desired -> Angular is heavy weight which has built in functionalities and its not flexible.
+
+Q15. What is Reusability and composition in React?
+1. Reusability is using already created components any where ever you want in your React application which reduces code weight.
+2. Composition is creating new and bigger components using small components. When you make changes to these small components will not impact the other components.
+3. Both are the part of React's component based architecture. 
+
+Q16. What is state management in React?
+1. In React state refers to the current value of a variable.
+2. If user triggers any action on the state of a variable like updation or deletion, it should automatically re-render and user should be able to see the changes in the UI immediately. This is called state management and is achieved by React hook **useState()**.
+
+Q17. What are props in JSX?
+1. Props are data which are passed from parent component to child component.
