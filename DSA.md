@@ -32,3 +32,7 @@
 7. Balanced Binary Tree
 8. Same Tree
 9. Subtree of another Tree
+10. Convert sorted array to Binary Search Tree
+11. Merge two Binary Trees
+12. Path Sum
+13. Construct String from Binary Tree
