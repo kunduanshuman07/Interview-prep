@@ -76,3 +76,36 @@ Let's suppose we have started a Pizza shop with 1 chef, going forward we cater o
 5. The heartbeat notifier checks the heartbeat of servers and when a server fails it actually goes into the DB and collects all the unexceuted tasks from all the server id's.
 6. The load balancer distributes all the tasks evenly to the remaining servers.
 7. What if server 4 fails and server 3 is working on executing task id 3 and load balancer picking up all the unexecuted tasks picks up task id 3 as well and what if assigns it back to server 3 again where task id 3 is in process. This is duplicacy of tasks. This fear is taken care by consistent hashing inside the load balancer which does not allow duplicate tasks being created.
+
+
+## Day 3:
+
+### Monolith architecture:
+1. The entire application is designed, deployed as a single unit.
+2. UI interface, business logic, data access layer are all at one place.
+3. It can be horizontally scaled but its very difficult to do so.
+4. Complete architecture uses the same tech stack.
+5. Changes on one part of the application often requires changes in other parts as well.
+6. When a new team member comes, he/she needs to go through the complete code to understand the application athough he/she will work on one small part.
+7. Have procedural calls which are fast reason being the calls are within one server(local).
+
+### Microservice architecture:
+1. The entire application is divided into small services which are independent of one other.
+2. Every service has its own simple business logic and probably a seperate database which decomposes it to a simple architecture.
+3. It can easily be scaled.
+4. Because of the services being independent of one other, mixture of tech stacks can be used.
+5. When a new team member comes and he/she is assinged a specific task then he needs to just understand the small code logic of the service he/she will be working on.
+6. Some times slower in request processing because the calls of one service to other is not local rather they are remote which can take some time.
+7. As they grow it becomes complex to manage the architecture.
+8. Requires more planning and a good architect to design.
+
+
+### Database Sharding:
+1. It is a way of partition your database in smaller more manageable chunks called shards using some unique sharding key or criteria.
+2. Every shard is distributed to multiple database servers.
+3. Every shard contains smaller range of the complete data.
+4. Servers are assigned tasks to query data base from specific shards.
+5. After sharding the performance of the over all request response process increases, the reason being parallel querrying in the database shards.
+6. For example in a dating app we shard the database based on location.
+7. Generally used in Bigger applications where there is huge traffic and high volume of data being fetched at once.
+8. There are some challenges like Data consistency, Re-routing when a shard fails (This fear can be avoided using Master Slave architecture where the slave continously copies its master, read permissions are from slave and write permissions are only into Master, when master fails, the slaves chose one master amongs themselves.), Joins processing among two or more shards can be slow.
