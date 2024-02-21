@@ -53,3 +53,6 @@
 14. Lowest Common Ancestor of a Binary Search Tree
 15. Insert into a Binary Search Tree
 16. Delete Node in a BST
+17. Binary Tree Level Order Traversal
+18. Binary Tree Right Side View
+19. Minimum Distance between BST nodes
