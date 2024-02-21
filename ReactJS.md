@@ -122,3 +122,4 @@ Q23. What is the role of App.js in React?
 Q24. Why is export default used in React?
 1. Whenever a .js file is created everything is kept inside a javascript function.
 2. This function is available to be imported by other components in the application only if it has been exported where it has been written.
+

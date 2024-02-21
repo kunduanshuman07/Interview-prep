@@ -37,3 +37,19 @@
 11. Merge two Binary Trees
 12. Path Sum
 13. Construct String from Binary Tree
+
+
+## Day 3 -> 
+
+### Array:
+12. Unique Email Address
+13. Isomorphic Strings
+14. Can Place flowers
+15. Majority Element
+16. Next Greater Element
+17. Find Pivot index
+
+### Trees:
+14. Lowest Common Ancestor of a Binary Search Tree
+15. Insert into a Binary Search Tree
+16. Delete Node in a BST
