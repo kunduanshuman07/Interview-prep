@@ -123,3 +123,27 @@ Q24. Why is export default used in React?
 1. Whenever a .js file is created everything is kept inside a javascript function.
 2. This function is available to be imported by other components in the application only if it has been exported where it has been written.
 
+## Day 3:
+
+Q25. What is the role of JSX in React?
+1. JSX(Javascript XML) is a syntax extension in React.
+2. It allows users to write HTML like code inside Javascript functions.
+3. It improves code reading and writing ability.
+
+Q26. What is Babel?
+1. Bable is a react library.
+2. When we write code in JSX, the code is transpiled to Javascript before sending it to browser using babel because browser only understands Javascript.
+
+Q27. What is the role of Fragment in JSX?
+1. Fragment wraps small elements and containers within it. **(<>{code}</>)**
+2. It caters the unnecessary usage of react blocks(divs) which might effect the UI of the web application.
+   
+Q28. What is use of spread operator in JSX?
+1. {...props} is used to pass all the properties of a javascript object to other components in React.
+2. It avoids mannual listing of every key value pair being passed to any component as prop.
+
+Q29. What is the difference between a transpiler and compiler?
+1. Transpiler converts high level language to another high level language.
+2. Converting JSX to Javascript is called transpilation.
+3. Compiler converts high level language to another low level language.
+4. Converting C++ to machine level code/ bytecode is called compilation.
