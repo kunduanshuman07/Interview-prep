@@ -57,3 +57,17 @@
 18. Binary Tree Right Side View
 19. Minimum Distance between BST nodes
 20. Symmetric Tree
+
+
+## Day 4 ->
+
+### Array:
+18. Range Sum Query-Immutable
+19. Find all numbers dissapeared in an array
+20. Maximum number of balloons
+21. Word Pattern
+22. Design Hashset
+23. Design Hashmap
+
+### Tree:
+21. Binary Tree Zig Zag Level Order Traversal

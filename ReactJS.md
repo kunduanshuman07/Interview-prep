@@ -147,3 +147,58 @@ Q29. What is the difference between a transpiler and compiler?
 2. Converting JSX to Javascript is called transpilation.
 3. Compiler converts high level language to another low level language.
 4. Converting C++ to machine level code/ bytecode is called compilation.
+
+
+
+## Day 4:
+
+Q30. What are React components?
+1. Reusable building blocks of a React web application.
+
+Q31. What are the types of React components?
+1. Functional Components
+2. Class Components
+
+Q32. What are Functional Components?
+1. Defined as Javascript functions : 
+   **function AppComponent(){
+        return (
+            write html code here.
+        )
+    }**
+
+2. Does not have a render method
+3. They are stateless but now using hooks they can manage states
+4. They do not use lifecycle methods
+5. They donot use this keyword
+
+Q33. What are class components?
+1. Defined as Javascript classes
+    class AppComponent extends Component{
+        render(){
+            return(
+                your html code goes here
+            )
+        }
+    }
+2. Does have a render method
+3. They are stateful and can manage states using **this.state**.
+4. They have lifecycle methods
+5. They use this key word for accesing state, props of the particular class instance.
+   
+Q34. What is prop drilling?
+1. It refers to the passage of props from parent -> child -> grand child -> and so on.
+
+Q35. Why to avoid prop drilling?
+1. It makes code readablity poor anc complex.
+2. Debugging is difficult as you have to go through numerous components.
+3. Affects code performance.
+
+Q36. What are the methods to avoid prop drilling?
+1. Use Context API
+2. Use callback functions
+3. Custom hooks
+
+Q37. What is this keyword?
+1. **this** keyword points to the instance of the class and any parameter being stored can be accessed using this keyword inside the same class.
+2. Just like other languages which supports OOPs concept, this works same in all.
