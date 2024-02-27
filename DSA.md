@@ -70,3 +70,20 @@
 23. Design Hashmap
 24. Sort an array
 25. Construct product array without itself
+
+
+## Day 5 ->
+
+### Stack:
+1. Valid parentheses
+2. Baseball Game
+3. Min stack
+4. Evaluate Reverse Polish Notation
+5. Remove stars from a string
+
+### Linked List:
+1. Reverse a Linked List iteratively
+2. Reverse a Linked List recursively
+3. Merge two sorted Linked Lists
+4. Pallindrome Linked List
+5. Remove Linked List elements
