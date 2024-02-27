@@ -138,3 +138,25 @@ Let's suppose we have started a Pizza shop with 1 chef, going forward we cater o
    3. Recieving the frame: The network device when matched with the frames destination IP it recieves the header and the trailer of the IP packet and processes the IP data packet via correct gateway and routing.
 5. Physical Layer: This is layer is responsible for the transmission of data in the physical infrastructure.
    
+**Practical example**:
+
+Scenario:
+
+1. Computer A (client) wants to access a website hosted on Computer B (server) through the internet.
+
+Process:
+
+1. Client A opens a web browser and types in the URL of the desired website.
+2. The browser creates an HTTP request at the Application Layer, specifying what it wants.
+3. This request is passed to the Transport Layer, where TCP breaks it into manageable segments, adds sequence numbers, and other control information.
+4. The segmented data is handed to the Network Layer, where IP adds source and destination IP addresses, creating packets.
+5. Now, at the Data Link Layer, these packets are encapsulated into frames with MAC addresses added.
+6. The frames are then sent through the physical medium (Ethernet cable, Wi-Fi signal, etc.) at the Physical Layer.
+7. Along the way, routers at the Network Layer read the destination IP address, decide the best path, and forward the frames accordingly.
+8. The frames eventually reach Computer B.
+9. Computer B's network interface card (NIC) at the Physical Layer receives the frames, checks the MAC address to see if it matches its own.
+10. If the MAC address matches, the frame is passed up to the Data Link Layer where the IP packet is extracted.
+11. The IP packet is then passed up to the Network Layer, where the IP address is checked to ensure it's meant for Computer B.
+12. Finally, the HTTP request arrives at the Application Layer on Computer B, where the web server software processes it.
+13. The web server then generates an HTTP response, which goes through a similar process but in reverse.
+14. The response travels back through the layers, from Computer B to Computer A, delivering the requested web page.
