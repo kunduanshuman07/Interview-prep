@@ -111,3 +111,30 @@ Let's suppose we have started a Pizza shop with 1 chef, going forward we cater o
 8. There are some challenges like Data consistency, Re-routing when a shard fails (This fear can be avoided using Master Slave architecture where the slave continously copies its master, read permissions are from slave and write permissions are only into Master, when master fails, the slaves chose one master amongs themselves.), Joins processing among two or more shards can be slow.
 
 ## Day 4:
+
+### HTTP:
+1. HTTP: Hyper text transfer protocol
+2. It's a set of rules used by systems to access and transfer any type of data across internet (world wide web);
+3. It uses port 80, what is a port? Port is like a door to enter or exit a building so accessing and providing stuff internet using HTTP uses port 80, that is gate number 80 to internet building.
+4. Uses stateless client server communication, i.e after one communication both client and server forgets about that happened.
+
+### HTTPS:
+1. Works similar to HTTP with a extra S in the end which serves Security over transferring private data like passwords.
+2. It converts the private data to codes which only client and server understands.
+
+### TCP/IP:
+1. Transmission Control Protocol
+2. Works just one layer below HTTP/HTTPS.
+3. It helps the data being transferred to client from server complete a smooth process by splitting the data into packets which is more understandable and manageable.
+
+
+### TCP Model: Helps communicate between network devices over the internet
+1. Application layer: This layer is responsible for requesting web pages from server using HTTP.
+2. Transport layer: This layer is responsible for establishing a connection between client and server uses TCP.
+3. Network layer: Also known as IP layer. It is responsible for breaking down data into packets and giving each packet the IP address of both the server and the client.
+4. Data Link layer: Responsible for collecting the IP packets from Network Layer and prepares it for transmitting over the internet.
+   1. Encapsulation: Every packet is given a header and a trailer which consists the Mac addresses for both the client and server and the error check protocols respectively, called as frames.
+   2. Sending the frame: Each frame is then sent either using Ethernet cables or wifi signals to the network of devices over the internet.
+   3. Recieving the frame: The network device when matched with the frames destination IP it recieves the header and the trailer of the IP packet and processes the IP data packet via correct gateway and routing.
+5. Physical Layer: This is layer is responsible for the transmission of data in the physical infrastructure.
+   
