@@ -109,3 +109,5 @@ Let's suppose we have started a Pizza shop with 1 chef, going forward we cater o
 6. For example in a dating app we shard the database based on location.
 7. Generally used in Bigger applications where there is huge traffic and high volume of data being fetched at once.
 8. There are some challenges like Data consistency, Re-routing when a shard fails (This fear can be avoided using Master Slave architecture where the slave continously copies its master, read permissions are from slave and write permissions are only into Master, when master fails, the slaves chose one master amongs themselves.), Joins processing among two or more shards can be slow.
+
+## Day 4:

@@ -57,7 +57,7 @@
 18. Binary Tree Right Side View
 19. Minimum Distance between BST nodes
 20. Symmetric Tree
-
+21. Binary Tree Zig Zag Level Order Traversal
 
 ## Day 4 ->
 
@@ -68,6 +68,5 @@
 21. Word Pattern
 22. Design Hashset
 23. Design Hashmap
-
-### Tree:
-21. Binary Tree Zig Zag Level Order Traversal
+24. Sort an array
+25. Construct product array without itself
