@@ -160,3 +160,20 @@ Process:
 12. Finally, the HTTP request arrives at the Application Layer on Computer B, where the web server software processes it.
 13. The web server then generates an HTTP response, which goes through a similar process but in reverse.
 14. The response travels back through the layers, from Computer B to Computer A, delivering the requested web page.
+    
+## Day 5:
+
+### What happens when you click on www.google.com?
+1. First of all your OS tries searching in its own cache about the destination IP address whether you have visited the Uniform Resource Locator (URL) before.
+2. If it does not find it then it goes to Domain Name System (DNS), if no reply comes from there then it goes to .com servers and there also the response is no, then it goes to single authorized servers.
+3. Finally the server IP address is with you.
+4. Your Application layer sends a get request to the server IP address using HTTP/HTTPS.
+5. Application layer -> Transport layer -> Network layer -> Data Link layer -> Physical Layer.
+6. The server then sends a response back with HTML, CSS and JS which you see in the form of a web page in your browser.
+
+### What are Relational Databases?
+1. Databases based on relational models.
+2. Data organized in tables with rows and columns in it.
+3. Every table has a primary key which uniquely indentifies the table.
+4. Tables can have foreign keys for establishig relations to different tables.
+5. Uses SQL as their main language.

@@ -87,3 +87,10 @@
 3. Merge two sorted Linked Lists
 4. Pallindrome Linked List
 5. Remove Linked List elements
+
+
+## Day 6 -> 
+
+### Linked List:
+6. Remove duplicates from sorted list.
+7. Middle of the linked list.
