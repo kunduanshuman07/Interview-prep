@@ -63,6 +63,7 @@
 8. Remove nth node from the back of the linked list
 9. Add two numbers given as linked lists
 10. Delete a node from the linked list without the address of the head being given
+11. Find intersection point Y of linked lists
 
 
 ### Stack:
