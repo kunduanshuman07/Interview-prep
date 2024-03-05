@@ -1,6 +1,5 @@
 # 100 React Js Interview Questions with proper explanation and understanding
 *by Anshuman Kundu*
-## Day 1:
 
 Q1. What is React and What is its role in Software Development?
 1. React is an open-source Javascript library
@@ -45,9 +44,6 @@ Q7. What is the role of JSX in React?
 Q8. What is declarative syntax & imperative syntax?
 1. Output driven code is called declarative syntax which provides you what to do without involving the steps of how to do.
 2. Imperative syntax involves commands which tells you what to do and how to do both?
-
-
-## Day 2:
 
 Q9. What is an Arrow funtion in JSX?
 1. Simple and Concise way of defining regular javascript functions.
@@ -123,8 +119,6 @@ Q24. Why is export default used in React?
 1. Whenever a .js file is created everything is kept inside a javascript function.
 2. This function is available to be imported by other components in the application only if it has been exported where it has been written.
 
-## Day 3:
-
 Q25. What is the role of JSX in React?
 1. JSX(Javascript XML) is a syntax extension in React.
 2. It allows users to write HTML like code inside Javascript functions.
@@ -147,10 +141,6 @@ Q29. What is the difference between a transpiler and compiler?
 2. Converting JSX to Javascript is called transpilation.
 3. Compiler converts high level language to another low level language.
 4. Converting C++ to machine level code/ bytecode is called compilation.
-
-
-
-## Day 4:
 
 Q30. What are React components?
 1. Reusable building blocks of a React web application.
