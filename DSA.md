@@ -27,6 +27,23 @@
 24. Sort an array
 25. Construct product array without itself
     
+### Linked List:
+1. Reverse a Linked List iteratively
+2. Reverse a Linked List recursively
+3. Merge two sorted Linked Lists
+4. Pallindrome Linked List
+5. Remove Linked List elements
+6. Remove duplicates from sorted list.
+7. Middle of the linked list.
+8. Remove nth node from the back of the linked list
+9. Add two numbers given as linked lists
+10. Delete a node from the linked list without the address of the head being given
+11. Find intersection point Y of linked lists
+12. Detect a cycle in a linked list
+13. Reverse the linked list in size of k
+14. Find the starting point of cyclic linked list
+15. Flattened linked list
+
 
 ### Trees:
 1. Binary Tree Inorder traversal
@@ -51,20 +68,10 @@
 20. Symmetric Tree
 21. Binary Tree Zig Zag Level Order Traversal
 
-
-### Linked List:
-1. Reverse a Linked List iteratively
-2. Reverse a Linked List recursively
-3. Merge two sorted Linked Lists
-4. Pallindrome Linked List
-5. Remove Linked List elements
-6. Remove duplicates from sorted list.
-7. Middle of the linked list.
-8. Remove nth node from the back of the linked list
-9. Add two numbers given as linked lists
-10. Delete a node from the linked list without the address of the head being given
-11. Find intersection point Y of linked lists
-
+### Recursion:
+1. Subset sums
+2. Subset - II
+3. Combination sum - I
 
 ### Stack:
 1. Valid parentheses
