@@ -133,40 +133,41 @@ Q12. How does React loads the web page and displays it to the user?
 2. Your application(you) controls the usage and integration of library in your code where as Framework controls the structure of the web application.
 3. Library is lightweight and can be manipulated as desired -> Angular is heavy weight which has built in functionalities and its not flexible.
 
-Q18. What is NPM and what is the role of node_modules in React?
+## 23. What is NPM and what is the role of node_modules in React?
 1. NPM - Node Package Manager is responsible for managing and keeping all the modules, libraries and dependencies in a folder called node_modules which are necessary for the React application development.
-Q19. What is the role of public folder in React?
+   
+## 24. What is the role of public folder in React?
 1. Public folder is responsible for keeping all the static assets of a web application.
 2. These assets are directly served the web browser when website is opened first.
 3. It contains favicons, static images, **index.html**, etc.
    
-## 23. What is the role of index.html in React?
+## 25. What is the role of index.html in React?
 1. *index.html* is the entry point of our web application.
 2. It contains a div with id root in the body which contains the content being served and displayed in the UI.
    
-## 24. What is the role of src folder in React?
+## 26. What is the role of src folder in React?
 1. src folder is responsible for containing all the dynamic assets needed for our React application.
 2. **App.js, index.js** are must in src folder, without these your web application won't run.
 3. You can create components inside this folder.
    
-## 25. What is the role of index.js in React?
+## 27. What is the role of index.js in React?
 1. index.js finds the root element in the index.html file using ReactDOM.
 2. ReactDOM is a react library which is used to point referrence to the DOM and deals with the DOM directly.
 3. After finding the root element it replaces the content of root with App.js file.
 
-## 26. What is the role of App.js in React?
+## 28. What is the role of App.js in React?
 1. App.js is the root component of our web application.
 2. It can incorporate components, routing and usually used to structure the layout of our application.
 
-## 27. Why is export default used in React?
+## 29. Why is export default used in React?
 1. Whenever a .js file is created everything is kept inside a javascript function.
 2. This function is available to be imported by other components in the application only if it has been exported where it has been written.
 
-## 28. What are the benefits of React Hooks?
+## 30. What are the benefits of React Hooks?
 1. When seen from behind Hooks are basically Javascript classes with specific logics.
 2. Hooks are made to avoid using Javascript classes with huge code snippets and promote functional programming.
 3. It keeps our code concise and makes it more readable and resuable.
 
-## 29. What are two most important rules in React Hooks?
+## 31. What are two most important rules in React Hooks?
 1. Hooks can only be called within React Functional components or custom hooks.
 2. Hooks can only be called on the topmost level of a React Functional component or any custom hook.
