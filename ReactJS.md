@@ -171,3 +171,53 @@ Q12. How does React loads the web page and displays it to the user?
 ## 31. What are two most important rules in React Hooks?
 1. Hooks can only be called within React Functional components or custom hooks.
 2. Hooks can only be called on the topmost level of a React Functional component or any custom hook.
+
+## 32. Describe lifecycle methods in React.
+1. Mounting Phase: The phase when a component mounts.
+   1. constructor(): Used to initiallise event handlers and states.
+   2. getDerivedStateFromProps(props, state): Used to update the state values when new props are received just before the component mounts.
+   3. render(): Renders the UI
+   4. componentDidMount(): Invoked just after the component mounts, can be used for API calls.
+2. Updating Phase: The phase when component is updated.
+   1. getDerivedStateFromProps(props, state): Handles changes in the prop values and updates the states accordingly.
+   2. shouldComponentUpdate(nextProps, nextState): Decides whether the component should be re-rendered or not based on the new props and state values.
+   3. render(): Renders the UI with the most updated changes.
+   4. getSnapShotBeforeUpdate(prevProps, prevState): Stores the props and state values just before the most recent render of the component.
+   5. componentDidUpdate(prevProps, prevState, snapshot): Invoked just after the component is updated after props or state changes.
+3. Unmounting Phase: The phase when component is unmounted.
+   1. ComponentWillMount(): Invoked just before the component is unmounted or destroyed cancelling network calls, unbinding event listeners, etc.
+
+## 33. Explain **useEffect** hook in React.
+1. **useEffect** hook works as a side effect in React.
+2. It is used to perform some action just after any component is mounted.
+3. It works as a replacement of componentDidMount(), componentDidUpdate() and componentWillMount() in Functional components.
+
+## 34. Explain **useMemo** hook in React.
+1. It is used to memoize the result of a function.
+2. It returns a memoized value.
+3. Useful for optimizing performance by caching the result of an expensive computation.
+4. Re-runs the function and updates the cached value only if the dependencies change.
+
+## 35. Explain **useCallback** hook in React.
+1. It is used to memoize a function instance.
+2. Returns a memoized version of the callback function.
+3. Useful for preventing unnecessary re-creation of callback functions in child components.
+4. Re-creates the function instance only if the dependencies change.
+
+## 36. How do you perform data fetching in React?
+1. Generally two methods for fetching data in React.
+2. Using fetch function which is a javascript native which accepts the api url as argument : **await fetch('api-url');**
+3. Using axios which is a third party library and needs to be installed before usage, accepts url as argument and request method (get, post, patch, delete) should be specified: **axios.get('api-url');**
+
+## 37. What is React router and it's key components?
+1. First installation: **npm install react-router-dom** to use router functionality which decides which component to render on a specific frontend url path.
+2. BrowserRouter wraps our application and provides router functionality.
+3. <"Route path="/home" component={<"Home"/>}/> : This says when **http:localhost:3000/home** path will hit we should render the component named Home.
+4. This meets the purpose of lazy loading which says that render a component only when it is required.
+   
+## 38. What is the concept of error boundaries in React?
+1. It's a feature in React which prevents the UI crash whenever an error occurs.
+2. We just need to create an ErrorBoundary class or a function which will catch the error when a component mounts and performs the action like showing some error screen or a fallback.
+3. We need to wrap our application with ErrorBoundary component.
+
+
