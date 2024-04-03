@@ -272,3 +272,6 @@ Q12. How does React loads the web page and displays it to the user?
 2. Usage of let and const.
 3. Prop destructuring.
 4. Template literals: console.log(`Anshuman Kundu ${some variable}`);
+
+
+**Copyright @ Anshuman Kundu**
