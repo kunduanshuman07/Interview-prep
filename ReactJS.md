@@ -1,3 +1,5 @@
+**Copyright @ Anshuman Kundu**
+
 # React Js Interview Questions with indepth explanations.
 *by Anshuman Kundu*
 
