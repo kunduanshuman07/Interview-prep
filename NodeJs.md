@@ -59,3 +59,42 @@
 ### 10. When not to use Node.js for Backend development?
 1. Building applications with heavy computations and CPU intensive tasks: Because Node.js is single-threaded and for heavy computations, multi-threaded programming is prefered for top notch performance.
 
+### 11. What is NPM and what is role of node_modules folder?
+1. NPM - Node package manager : It is used to manage all the dependencies required for a Node project.
+2. node_modules folder stores the raw codes of all the dependencies for the Node project.
+   
+### 12. What is the role of package.json?
+1. package.json stores the complete project metadata i.e every information about the node project including project name, author, licenses, dependencies name, etc.
+
+### 13. What is the difference between a module and a function?
+1. A module is responsible for a specific functionality which can be made up of multiple functions integrated.
+2. A function is merely a set of instructions to be performed.
+3. There are two ways to export them for reusablitiy: 1. module.exports.func1 = func1 or export func1;
+
+### 14. What are the types of modules?
+1. Built in Modules: Comes with the Node project.
+2. Local Modules: Users make to implement some specific functionality.
+3. Third party modules: Needs to be installed as per the requirement.
+
+### 15. What is the role of **fs** module?
+1. It is used to interact with the file system.
+2. It can help in reading, writing, deleting, etc a file in the file system.
+
+### 16. What is the role of **path** module?
+1. It is used to manipulate paths.
+2. It has methods like join which can help in formatting, parsing paths in your node project.
+   
+### 17. What is the role of **os** module?
+1. It is used to interact with the Operating system.
+
+### 18. What is the role of **events** module?
+1. It is used to handle the occurring events.
+
+### 19. What is the role of **http** module?
+1. It is used to interact with the server ports and send back response to the client.
+2. It has a createServer() function which helps create a server which can listen on a specific port.
+
+### 20. What is the difference between a function and an event?
+1. Event: Anything happening in a program is termed as an event.
+2. Function: It can be used to perform some action when an event is caught (Event handlers are functions only).
+
