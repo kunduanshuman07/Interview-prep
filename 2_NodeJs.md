@@ -98,3 +98,6 @@
 1. Event: Anything happening in a program is termed as an event.
 2. Function: It can be used to perform some action when an event is caught (Event handlers are functions only).
 
+
+
+**Copyright @ Anshuman Kundu**
