@@ -56,3 +56,65 @@
 ### 8. What is the use of app.use(middlewarename);
 1. It helps the middlewares to go into the stack of functions to be pulled out one by one for systematic execution when a request arrives.
 
+
+### 9. What are the types of middleware?
+1. Application level middleware
+2. Router level middleware
+3. Built-in middleware
+4. Error handling middleware
+5. Third party middlware
+
+### 10. What is an application level middleware?
+1. Middlewares governing the whole application.
+2. All the incoming requests and taken to this middleware.
+3. const middlewareFunc = (req, res, next) =>{
+        res.send('How are you?');
+        next();
+   } - Defining middlewares
+4. app.use(middlewareFunc); - Using application level middleware
+
+
+### 11. What is a the router level middleware?
+1. Middlewares governing specific routes only.
+2. All the incoming requests specific to this path only is taken to this middleware.
+3. const middlewareFunc = (req, res, next) =>{
+        res.send('How are you?');
+        next();
+   } - Defining middlewares
+4. app.use('/example',middlewareFunc); - Using middlware for requests to '/example' routes only.
+
+### 12. What is a built-in middleware?
+1. There are some middlewares which are provided by Express already.
+2. Example: app.use(express.static("public"));
+3. The above middleware will help in serving the static files to the client side which are present inside the public directory.
+
+### 15. What is an Error handling middleware?
+1. It captures the error in the web application and executes the middleware functionality defined as below.
+2. app.use((err,req,res,next)=>{
+        console.error(err.stack);
+        res.status(200).send('Something went wrong');
+   })
+3. When there are 4 middleware functions in the stack then the error handling middleware should be declared in the last. 
+
+### 14. What is third party middleware?
+1. They need to be installed via npm before using.
+2. Examples: body-parser, helmet, etc.
+
+### 15. What is Routing in Express.js?
+1. When there is an incoming HTTP request, it is first directed to the middleware.
+2. We have several controllers defined for specific functionalities, these controllers need to be directed to when a specific request arrives based on the route path.
+3. This whole process is called routing.
+
+### 16. How do you implement routing?
+1. We define routes.
+2. app.get('/login', (req,res)=>{
+        console.log("Login route");
+   })
+3. Similarly changing the route methods such as get, post, patch, put, delete we can meet the route requirements.
+
+### 17. Explain the route parameters.
+1. app.get() -> Http request method
+2. '/login' -> The url for the request.
+3. (req,res)=>{
+        console.log("Login route");
+   } -> This is handler function which will be executed with arguments as req and res.
