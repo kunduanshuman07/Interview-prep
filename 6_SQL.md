@@ -167,27 +167,80 @@ select * from employees;
 ### Details select statement:
 ```sql
 -- Display specific columns 
-    select name, marks from student;
+select name, marks from student;
 
-    -- Display all columns
-    select * from student;
+-- Display all columns
+select * from student;
 
-    -- Display distinct column values
-    select distinct city from student; 
+-- Display distinct column values
+select distinct city from student; 
 
-    -- where clause
-    select * from student where marks>=80;
-    select * from student where city='Mumbai' and marks>=80;
+-- where clause
+select * from student where marks>=80;
+select * from student where city='Mumbai' and marks>=80;
 
-    -- Operators
-    select * from student where marks+10>100; 
-    select * from student where marks=93;
-    select * from student where marks>90 AND marks<94;
-    select * from student where marks between 80 and 90;
-    select * from student where city not in ("Mumbai", "Delhi");
+-- Operators
+select * from student where marks+10>100; 
+select * from student where marks=93;
+select * from student where marks>90 AND marks<94;
+select * from student where marks between 80 and 90;
+select * from student where city not in ("Mumbai", "Delhi");
 
-    -- Limit
-    select * from student limit 3; 
-    
+-- Limit
+select * from student limit 3; 
 
+-- Order By Clause
+select * from student order by city asc; 
+select * from student order by marks desc;
+
+-- Aggregate Functions
+-- count
+select count(*) from student;
+
+-- max
+select max(marks)from student; 
+
+-- min
+select min(marks) from student; 
+
+-- sum
+select sum(marks) from student;
+
+-- avg
+select avg(marks) from student; 
 ```
+
+### Group by clause: This collects data from multiple records and displays by grouping them all at once.
+
+```sql
+    select city, count(name) from student
+    group by city;
+```
+
+### Having clause: Similar to *where* clause it helps us apply conditions but the differnce is *where* helps us define conditions on rows but *having* helps us define conditions on groups i.e it can be used after the group by.
+```sql
+select city, count(name), avg(marks) from student
+group by city
+having max(marks)>90;
+```
+
+### General Order of commands to be written in SQL
+1. select column(s)
+2. from table_name
+3. where condition 
+4. group by column(s)
+5. having condition
+6. order by column(s) asc/desc
+
+### Other table related queries
+1. Update: 
+   ```sql
+    update student
+    set grade='O'
+    where grade='A';
+   ```
+2. Delete:
+   ```sql
+    delete from student
+    where marks<33;
+   ```
