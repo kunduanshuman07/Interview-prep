@@ -162,3 +162,32 @@ select * from employees;
         constraint age_city_check check (age>=18 and city="Delhi")
     );
 ```
+
+
+### Details select statement:
+```sql
+-- Display specific columns 
+    select name, marks from student;
+
+    -- Display all columns
+    select * from student;
+
+    -- Display distinct column values
+    select distinct city from student; 
+
+    -- where clause
+    select * from student where marks>=80;
+    select * from student where city='Mumbai' and marks>=80;
+
+    -- Operators
+    select * from student where marks+10>100; 
+    select * from student where marks=93;
+    select * from student where marks>90 AND marks<94;
+    select * from student where marks between 80 and 90;
+    select * from student where city not in ("Mumbai", "Delhi");
+
+    -- Limit
+    select * from student limit 3; 
+    
+
+```
