@@ -1,6 +1,6 @@
 **Copyright @ Anshuman Kundu**
 
-# SQL One short study
+# SQL One shot study
 *by Anshuman Kundu*
 
 ### Database: It is a place where data is stored. It can be easily accessed digitally with the help of a software called DBMS (Database Management System). 
@@ -55,6 +55,110 @@ drop table projects;
 
 drop database anshuman; 
 
-``````
+```
 
 
+### Datatypes: Defines the type of data which will be stored in a particular column.
+
+![DataTypes](/assets/Screenshot%20(130).png)
+
+
+### All the SQL commands can be divided into 5 types:
+1. DDL (Data Definition Language): create, alter, truncate, drop, etc.
+2. DQL (Data Query Language): select
+3. DML (Data Manipulation Language): insert, update, delete
+4. DCL (Data Control Language): grant or revoke usage permissions
+5. DTL (Data Transaction Language): commit, transaction, rollback, etc.
+
+### Database related Queries:
+
+```sql
+-- Creating database
+
+create database anshuman;
+create database if not exists anshuman;
+
+-- Dropping database
+
+drop database anshuman;
+drop database if exists anshuman; 
+
+-- Show databases and tables
+
+show databases;
+use analytics;
+show tables;
+
+```
+
+### Table related queries:
+```sql
+create database company;
+use company;
+
+-- Creating a table to store employee info (id, name, salary) 
+
+create table employees(
+	id int primary key,
+    name varchar(50) not null,
+    salary int not null
+);
+
+-- Inserting data into employee table
+
+insert into employees
+(id, name, salary)
+values
+(1, "adam", 25000),
+(2, "bob", 30000),
+(3, "casey", 40000);
+
+-- Select and view table data
+
+select * from employees; 
+ 
+```
+
+### Primary Keys:
+1. A column in a table which uniquely identifies each row of that column.
+2. There can be only one Primary Key.
+3. It is unique in every single row entry and it is not null.
+4. We can make a set of columns combined a primary key as well:
+```sql
+    create table student(
+        id int not null,
+        name varchar(50) not null,
+        age int not null,
+        primary key (id, name)
+    );
+```
+5. In the above scenario id can be not unique and name can be not unique but the combination of both should always be unique because it's a primary key.
+
+### Foreign Keys: 
+1. Let suppose there are two tables A and B.
+2. A has a primary key named column x and B has a column y.
+3. So column y in table B can become a foreign key which refers to the primary key in Column A and this way establishes a relation between both the tables.
+4. There can be more than one foreign keys and can be filled with null values. 
+``` sql
+   create table temp(
+	emp_id int, 
+    foreign key (emp_id) references employees(id)
+);
+```
+
+### Constraints:
+1. not null : This ensures the column cannot have null values.
+2. unique: This ensures the column values are unique.
+3. default: sets default value of a column if null is entered.
+4. check: Limits the value allowed in a column.
+```sql
+    create table any(
+        id int primary key,
+        name varchar(50) not null,
+        username varchar(10) unique,
+        income int default 25000 check (income>=20000),
+        city varchar(10) not null,
+        age int not null,
+        constraint age_city_check check (age>=18 and city="Delhi")
+    );
+```
