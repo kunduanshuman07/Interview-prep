@@ -88,7 +88,7 @@
 2. Example: app.use(express.static("public"));
 3. The above middleware will help in serving the static files to the client side which are present inside the public directory.
 
-### 15. What is an Error handling middleware?
+### 13. What is an Error handling middleware?
 1. It captures the error in the web application and executes the middleware functionality defined as below.
 2. app.use((err,req,res,next)=>{
         console.error(err.stack);
