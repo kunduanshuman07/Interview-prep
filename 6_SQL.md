@@ -244,3 +244,259 @@ having max(marks)>90;
     delete from student
     where marks<33;
    ```
+
+### Revisiting Foreign Keys:
+```sql
+create database college;
+use college;
+
+
+create table dept(
+	id int primary key,
+    name varchar(10) not null
+);
+
+create table teacher(
+	id int primary key,
+    name varchar(10) not null,
+    dept_id int,
+    foreign key (dept_id) references dept(id)
+    on update cascade
+    on delete cascade
+);
+
+insert into dept
+(id, name)
+values
+(101, "Science"),
+(102, "English"),
+(103, "Hindi");
+
+insert into teacher
+(id, name, dept_id)
+values
+(101, "Adam", 101),
+(102, "Bob", 103),
+(103, "Casey", 102),
+(104, "Donald", 102);
+```
+![ER Diagram](/assets/EER.PNG)
+
+
+#### Cascading : Whenever there is a change(update/delete) in the parent table which has the primary key being referrenced by some foreign key in the child table, on update cascade and on delete cascade will reflect the changes to child table as well which contains the foreign key referrencing the parent table.
+
+
+### Alter Query: Helps in altering the schema of the table.
+1. Add Column:
+   ```sql
+        alter table table_name,
+        add column column_name datatype constraints
+   ```
+2. Drop Column:
+   ```sql
+        alter table table_name,
+        drop column column_name
+   ```
+3. Rename table:
+   ```sql
+        alter table table_name,
+        rename to new_table_name
+   ```
+4. Change Column:
+   ```sql
+        alter table table_name,
+        change column old_column_name new_column_name new_datatype new_constraints
+   ```
+5. Modify Column:
+   ```sql
+        alter table table_name,
+        modify column_name new_datatype new_constraints
+   ```
+
+### Truncate Query: Deletes all the data inside the table and keeps the table
+```sql
+    truncate table_name
+```
+
+### SQL Joins: Joins in SQL are used to combine two or more columns based on a related column between them.
+![Joins](assets/Joins.PNG)
+
+
+##### Inner Join: Returns records which are common in both table A and table B.
+
+```sql
+select column(s)
+from table_A
+inner join table_B
+on table_A.col_name=table_B.col_name
+```
+
+Example: 
+```sql
+create table student(
+	student_id int primary key,
+    name varchar(50) not null
+);
+
+create table courses(
+	student_id int primary key,
+    course varchar(50) not null
+);
+
+insert into student
+(student_id, name)
+values
+(101, "Adam"),
+(102, "Bob"),
+(103, "Casey");
+
+insert into courses
+(student_id, course)
+values
+(102, "English"),
+(105, "Math"),
+(103, "Science"),
+(107, "CSE");
+
+select * 
+from student as a
+inner join courses as b
+on a.student_id=b.student_id
+```
+
+##### Left Join: Returns all the records from the left table and the common records from both the tables, i.e it will return records in both the tables except the records only in the right table.
+
+```sql
+select column(s)
+from table_A
+left join table_B
+on table_A.col_name=table_B.col_name
+```
+
+Exmaple:
+```sql
+select *
+from student as a
+left join courses as b
+on a.student_id=b.student_id;
+```
+
+##### Right Join: Returns all the records from the right table and the common records from both the tables, i.e it will return records in both the tables except the records only in the left table.
+
+```sql
+select column(s)
+from table_A
+right join table_B
+on table_A.col_name=table_B.col_name
+```
+
+Exmaple:
+```sql
+select *
+from student as a
+right join courses as b
+on a.student_id=b.student_id;
+```
+
+##### Full Join: Returns all the data from the left table, right table and the common data between them.
+
+```sql
+select column(s)
+from table_A
+left join table_B
+on table_A.col_name=table_B.col_name
+union
+select column(s)
+from table_A
+right join table_B
+on table_A.col_name=table_B.col_name
+```
+
+
+##### Left Exclusive Join: Provide records only from the left table and not in the right table and not in common records.
+
+```sql
+select *
+from student as a
+left join courses as b
+on a.student_id=b.student_id
+where b.student_id is null;
+```
+
+##### Right Exclusive Join: Provide records only from the right table and not in the left table and not in common records.
+
+```sql
+select *
+from student as a
+right join courses as b
+on a.student_id=b.student_id
+where a.student_id is null;
+```
+
+##### Common Exclusive Join: Provide records from the left and the right table excluding the common records.
+```sql
+select * 
+from student as a
+left join courses as b
+on a.student_id=b.student_id
+where b.student_id is null
+union
+select * 
+from student as a
+right join courses as b
+on a.student_id=b.student_id
+where a.student_id is null
+```
+
+### SQL Subqueries: Queries inside SQL Queries (nested SQL queries)
+
+Data: 
+```sql
+create table student(
+	rollno int primary key,
+    name varchar(50) not null,
+    marks int not null
+);
+
+insert into student
+(rollno, name, marks)
+values
+(101, "Anil", 78),
+(102, "Bhumika", 93),
+(103, "Chetan", 85),
+(104, "Dhruv", 96),
+(105, "Emanuel", 92),
+(106, "Farah", 82);
+```
+
+Example 1: Get names of all the students who scored more than the class average
+
+Answer:
+```sql
+select name
+from student
+where marks > 
+(select avg(marks) from student);
+```
+
+Example 2: Get names of all the students with even roll numbers
+
+Answer: 
+```sql
+select name
+from student
+where rollno in 
+(select rollno
+from student
+where rollno%2=0);
+```
+
+### SQL Views: It is a virtual table based on the result set of a sql statement.
+
+```sql
+create view marks as
+select marks from student;
+select * from marks;
+```
+
+The above statement creates a virtual table marks by taking the results of marks query from student. This marks table can queried for further querrying.
