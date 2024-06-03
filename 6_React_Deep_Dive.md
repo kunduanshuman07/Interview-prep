@@ -5,7 +5,7 @@
 
 ### Elements, Components and Component Instances
 
-##### Go through the images below to understand:
+##### Go through the images below to understand how react works with elements, components and component instances:
 
 ![Elements](/assets/RUH-1.png)
 
