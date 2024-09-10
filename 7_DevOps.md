@@ -3,8 +3,6 @@
 # Demystifying DevOps: Tools and Practices through Practical Examples
 *by Anshuman Kundu*
 
-In this guide, we'll walk through how various DevOps tools fit into a real-world project scenario. From coding an idea to deploying and maintaining it, DevOps plays a vital role in streamlining the workflow, improving efficiency, and ensuring continuous delivery of high-quality software.
-
 ### The Idea: A Ticket Booking Website for Mars
 
 You come up with an idea—a website that allows users to book future trips to Mars. You're excited to get started and immediately begin coding on your laptop.
